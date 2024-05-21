@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\StudyByLDQ\\C#\\E-commerce\\ECommerceMVC\\ECommerceMVC\\ECommerceMVC.csproj": {}
+    "D:\\StudyByLDQ\\C#\\E-commerce\\E_Commerce\\ECommerceMVC\\ECommerceMVC\\ECommerceMVC.csproj": {}
   },
   "projects": {
-    "D:\\StudyByLDQ\\C#\\E-commerce\\ECommerceMVC\\ECommerceMVC\\ECommerceMVC.csproj": {
+    "D:\\StudyByLDQ\\C#\\E-commerce\\E_Commerce\\ECommerceMVC\\ECommerceMVC\\ECommerceMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\StudyByLDQ\\C#\\E-commerce\\ECommerceMVC\\ECommerceMVC\\ECommerceMVC.csproj",
+        "projectUniqueName": "D:\\StudyByLDQ\\C#\\E-commerce\\E_Commerce\\ECommerceMVC\\ECommerceMVC\\ECommerceMVC.csproj",
         "projectName": "ECommerceMVC",
-        "projectPath": "D:\\StudyByLDQ\\C#\\E-commerce\\ECommerceMVC\\ECommerceMVC\\ECommerceMVC.csproj",
+        "projectPath": "D:\\StudyByLDQ\\C#\\E-commerce\\E_Commerce\\ECommerceMVC\\ECommerceMVC\\ECommerceMVC.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\StudyByLDQ\\C#\\E-commerce\\ECommerceMVC\\ECommerceMVC\\obj\\",
+        "outputPath": "D:\\StudyByLDQ\\C#\\E-commerce\\E_Commerce\\ECommerceMVC\\ECommerceMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
