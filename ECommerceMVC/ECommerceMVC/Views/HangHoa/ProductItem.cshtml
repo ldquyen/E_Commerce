@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ECommerceMVC.ViewModels.HangHoaVM>
+
+<h3>Có @Model.Count() sản phẩm</h3>
+@foreach (var hanghoavm in Model)
+{
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="rounded position-relative fruite-item">
+            <div class="fruite-img">
+                <a asp-action="Detail" asp-controller="HangHoa" asp-route-idDetail="@hanghoavm.Mahh">
+                    <img src="~/Hinh/HangHoa/@hanghoavm.Anh" class="img-fluid w-100 rounded-top" alt="@hanghoavm.Tenhh">
+                </a>
+            </div>
+            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">@hanghoavm.TenLoai</div>
+            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                <a asp-action="Detail" asp-controller="HangHoa" asp-route-idDetail="@hanghoavm.Mahh">
+                    <h4>@hanghoavm.Tenhh</h4>
+                </a>
+                <p>@hanghoavm.Mota</p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="text-dark fs-5 fw-bold mb-0">$@hanghoavm.Dongia</p>
+                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> + Giỏ hàng </a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
