@@ -14,7 +14,6 @@
     </ol>
 </div>
 <!-- Single Page Header End -->
-
 <!-- Single Product Start -->
 <div class="container-fluid py-5 mt-5">
     <div class="container py-5">
@@ -23,9 +22,9 @@
                 <div class="row g-4">
                     <div class="col-lg-6">
                         <div class="border rounded">
-                            
-                                <img src="~/Hinh/HangHoa/@Model.Anh" class="img-fluid rounded" alt="@Model.Tenhh">
-                            
+
+                            <img src="~/Hinh/HangHoa/@Model.Anh" class="img-fluid rounded" alt="@Model.Tenhh">
+
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -40,20 +39,22 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <p class="mb-4">@Model.Mota</p>
-                        <div class="input-group quantity mb-5" style="width: 100px;">
-                            <div class="input-group-btn">
-                                <button class="btn btn-sm btn-minus rounded-circle bg-light border">
-                                    <i class="fa fa-minus"></i>
-                                </button>
+                        <form asp-controller="Cart" asp-action="AddToCart" asp-route-id="@Model.Mahh">
+                            <div class="input-group quantity mb-5" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-minus rounded-circle bg-light border" type="button">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm text-center border-0" value="1" name="quantity">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-plus rounded-circle bg-light border" type="button">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                            <div class="input-group-btn">
-                                <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                    <i class="fa fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm</a>
+                            <button  class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm</button>
+                        </form>
                     </div>
                     <div class="col-lg-12">
                         <nav>
@@ -473,5 +474,3 @@
     </div>
 </div>
 <!-- Single Product End -->
-
-

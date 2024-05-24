@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\StudyByLDQ\C#\E-commerce\E_Commerce\ECommerceMVC\ECommerceMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/StudyByLDQ/C\#/E-commerce/E_Commerce/ECommerceMVC/ECommerceMVC/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/StudyByLDQ/C\#/E-commerce/E_Commerce/ECommerceMVC/ECommerceMVC/Views/HangHoas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYVxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/StudyByLDQ/C\#/E-commerce/E_Commerce/ECommerceMVC/ECommerceMVC/Views/HangHoa/SortList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYVxTb3J0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/StudyByLDQ/C\#/E-commerce/E_Commerce/ECommerceMVC/ECommerceMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -72,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/StudyByLDQ/C\#/E-commerce/E_Commerce/ECommerceMVC/ECommerceMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/StudyByLDQ/C\#/E-commerce/E_Commerce/ECommerceMVC/ECommerceMVC/Views/Shared/Components/Cart/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/StudyByLDQ/C\#/E-commerce/E_Commerce/ECommerceMVC/ECommerceMVC/Views/Shared/Components/MenuLoai/Default.cshtml]

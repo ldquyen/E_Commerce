@@ -7,30 +7,46 @@ namespace ECommerceMVC.Controllers
 {
     public class HangHoaController : Controller
     {
+        private static List<HangHoaVM> NowList;
         private readonly Hshop2023Context db;
 
-        public HangHoaController(Hshop2023Context context) 
+        public HangHoaController(Hshop2023Context context)
         {
             db = context;
         }
 
-        public IActionResult Index(int? loai)
+        public IActionResult Index(int? loai, int sortOrder)
         {
-            var hangHoas = db.HangHoas.AsQueryable();
-            if (loai.HasValue)
+            if(sortOrder == 0)
             {
-                hangHoas = hangHoas.Where(hh => hh.MaLoai == loai.Value);
+                var hangHoas = db.HangHoas.AsQueryable();
+                if (loai.HasValue)
+                {
+                    hangHoas = hangHoas.Where(hh => hh.MaLoai == loai.Value);
+                }
+                var result = hangHoas.Select(res =>
+                new HangHoaVM
+                {
+                    Mahh = res.MaHh,
+                    Tenhh = res.TenHh,
+                    Dongia = res.DonGia ?? 0,
+                    Anh = res.Hinh ?? "",
+                    Mota = res.MoTaDonVi ?? "",
+                    TenLoai = res.MaLoaiNavigation.TenLoai
+                }).ToList();
+
+                NowList = result;
             }
-            var result = hangHoas.Select(res =>
-            new HangHoaVM{
-                Mahh = res.MaHh,
-                Tenhh = res.TenHh,
-                Dongia = res.DonGia ?? 0,
-                Anh = res.Hinh ?? "",
-                Mota = res.MoTaDonVi ?? "",
-                TenLoai = res.MaLoaiNavigation.TenLoai
-            });
-            return View(result);
+            else if (sortOrder == 1)
+            {
+                NowList = NowList.OrderBy(x => x.Dongia).ToList();
+            }
+            else if (sortOrder == 2)
+            {
+                NowList = NowList.OrderByDescending(x => x.Dongia).ToList();
+            }
+
+            return View(NowList);
         }
 
         public IActionResult Search(string? searchname)
@@ -50,7 +66,8 @@ namespace ECommerceMVC.Controllers
                 Anh = res.Hinh ?? "",
                 Mota = res.MoTaDonVi ?? "",
                 TenLoai = res.MaLoaiNavigation.TenLoai
-            });
+            }).ToList();
+            NowList = result;
             return View(result);
         }
 
@@ -75,7 +92,42 @@ namespace ECommerceMVC.Controllers
                 TonKho = 10,
                 Star = 5,
             };
+
             return View(result);
         }
+        //private void EnsureNowListIsPopulated()
+        //{
+        //    if (NowList == null)
+        //    {
+        //        var hangHoas = db.HangHoas.Select(res => new HangHoaVM
+        //        {
+        //            Mahh = res.MaHh,
+        //            Tenhh = res.TenHh,
+        //            Dongia = res.DonGia ?? 0,
+        //            Anh = res.Hinh ?? "",
+        //            Mota = res.MoTaDonVi ?? "",
+        //            TenLoai = res.MaLoaiNavigation.TenLoai
+        //        }).ToList();
+
+        //        NowList = hangHoas;
+        //    }
+        //}
+        //public IActionResult SortList(int sortOrder)
+        //{
+        //    var result = NowList;
+        //    if (sortOrder == 0)
+        //    {
+        //        result = NowList;
+        //    }
+        //    else if (sortOrder == 1)
+        //    {
+        //        result = NowList.OrderBy(x => x.Dongia).ToList();
+        //    }
+        //    else if (sortOrder == 2)
+        //    {
+        //        result = NowList.OrderByDescending(x => x.Dongia).ToList();
+        //    }
+        //    return View(result);
+        //}
     }
 }

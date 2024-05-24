@@ -7,6 +7,6 @@
         public string Ten { get; set; }
         public double DonGia {  get; set; }
         public int SoLuong {  get; set; }
-        public double Tong => SoLuong * DonGia;
+        public double Tong => DonGia * SoLuong;
     }
 }
