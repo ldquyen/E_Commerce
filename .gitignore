@@ -1,3 +1,5 @@
-
-ECommerceMVC/.vs/ECommerceMVC/FileContentIndex/8a8e7287-db4e-44e6-a1a9-9eb09fdf1bfc.vsidx
-*.vsidx
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
